@@ -5,9 +5,9 @@ interface IWokenFactory {
     function isTradingOpen(address token) external view returns (bool);
 }
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/merge/release-v4.9/contracts/token/ERC20/ERC20.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/merge/release-v4.9/contracts/token/ERC20/extensions/ERC20Permit.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/merge/release-v4.9/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts@4.9.0/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts@4.9.0/token/ERC20/extensions/ERC20Permit.sol";
+import "@openzeppelin/contracts@4.9.0/access/Ownable.sol";
 
 contract Woken is ERC20, ERC20Permit, Ownable {
     address public wokenFactory;
